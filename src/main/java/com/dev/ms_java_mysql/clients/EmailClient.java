@@ -22,7 +22,7 @@ public class EmailClient {
 
         emailDto.setIdFregues(freguesModel.getIdFregues());
         emailDto.setEmailTo(freguesModel.getEmail());
-        emailDto.setSubject("Envio de Email");
+        emailDto.setSubject("API MySQL");
         emailDto.setText("Ola " + freguesModel.getName());
 
         rabbitTemplate.convertAndSend("", routtingKey, emailDto);

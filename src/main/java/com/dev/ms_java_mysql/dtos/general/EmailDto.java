@@ -13,7 +13,7 @@ import lombok.Getter;
 @ToString
 public class EmailDto {
 
-    private Long idFregues;
+    private Long id;
     private String emailTo;
     private String subject;
     private String text;
