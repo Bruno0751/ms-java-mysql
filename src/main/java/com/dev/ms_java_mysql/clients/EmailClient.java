@@ -20,7 +20,7 @@ public class EmailClient {
     public void publishMenssageEmail (FreguesModel freguesModel) {
         var emailDto = new EmailDto();
 
-        emailDto.setIdFregues(freguesModel.getIdFregues());
+        emailDto.setId(freguesModel.getIdFregues());
         emailDto.setEmailTo(freguesModel.getEmail());
         emailDto.setSubject("API MySQL");
         emailDto.setText("Ola " + freguesModel.getName());

@@ -8,6 +8,9 @@ public class MsJavaMysqlApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MsJavaMysqlApplication.class, args);
+		System.out.println("------------------------------------------------------------------\n" +
+				"MYSQL\n" +
+				"------------------------------------------------------------------");
 	}
 
 }
