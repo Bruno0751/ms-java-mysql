@@ -1,12 +1,12 @@
-package com.dev.ms_java_mysql.controller;
+package com.dev.ms_java_mysql.v1.fregues.api.controller;
 
-import com.dev.ms_java_mysql.api.FreguesApi;
+import com.dev.ms_java_mysql.v1.fregues.api.FreguesApi;
 import com.dev.ms_java_mysql.clients.EmailClient;
-import com.dev.ms_java_mysql.dtos.FreguesRecordDto;
-import com.dev.ms_java_mysql.models.FreguesModel;
-import com.dev.ms_java_mysql.models.RegisterModel;
-import com.dev.ms_java_mysql.repositories.FreguesRepository;
-import com.dev.ms_java_mysql.repositories.RegisterRepository;
+import com.dev.ms_java_mysql.v1.fregues.api.dto.FreguesRecordDto;
+import com.dev.ms_java_mysql.v1.fregues.api.model.FreguesModel;
+import com.dev.ms_java_mysql.v1.fregues.api.model.RegisterModel;
+import com.dev.ms_java_mysql.v1.fregues.api.repositorie.FreguesRepository;
+import com.dev.ms_java_mysql.v1.fregues.api.repositorie.RegisterRepository;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

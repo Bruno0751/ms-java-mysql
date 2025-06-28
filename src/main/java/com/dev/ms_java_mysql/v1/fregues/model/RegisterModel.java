@@ -1,4 +1,4 @@
-package com.dev.ms_java_mysql.models;
+package com.dev.ms_java_mysql.v1.fregues.api.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -6,8 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

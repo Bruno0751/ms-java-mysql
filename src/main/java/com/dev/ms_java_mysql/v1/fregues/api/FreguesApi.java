@@ -1,7 +1,7 @@
-package com.dev.ms_java_mysql.api;
+package com.dev.ms_java_mysql.v1.fregues.api;
 
-import com.dev.ms_java_mysql.dtos.FreguesRecordDto;
-import com.dev.ms_java_mysql.models.FreguesModel;
+import com.dev.ms_java_mysql.v1.fregues.api.dto.FreguesRecordDto;
+import com.dev.ms_java_mysql.v1.fregues.api.model.FreguesModel;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import jakarta.validation.Valid;
