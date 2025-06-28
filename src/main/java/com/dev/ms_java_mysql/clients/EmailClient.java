@@ -1,7 +1,7 @@
 package com.dev.ms_java_mysql.clients;
 
-import com.dev.ms_java_mysql.dtos.general.EmailDto;
-import com.dev.ms_java_mysql.models.FreguesModel;
+import com.dev.ms_java_mysql.v1.fregues.dto.general.EmailDto;
+import com.dev.ms_java_mysql.v1.fregues.model.FreguesModel;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

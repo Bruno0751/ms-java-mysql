@@ -1,12 +1,12 @@
-package com.dev.ms_java_mysql.v1.fregues.api.model;
+package com.dev.ms_java_mysql.v1.fregues.model;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -31,11 +31,15 @@ public class FreguesModel extends RepresentationModel<FreguesModel> implements S
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idFregues;
 
-    @NotBlank(message = "O campo 'name' não pode ser vazio. Por favor, forneça um valor válido.")
+    @NotNull(message = "O campo 'name' não pode ser vazio. Por favor, forneça um valor válido.")
     @Column(name = "name", nullable = false)
     private String name;
 
     @NotNull(message = "O campo 'email' não pode ser null. Por favor, forneça um valor válido.")
     @Column(name = "email", nullable = false)
     private String email;
+
+    @Nullable
+    @Column(name = "document")
+    private String document;
 }
