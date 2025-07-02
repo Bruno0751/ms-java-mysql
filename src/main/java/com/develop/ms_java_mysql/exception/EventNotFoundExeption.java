@@ -1,4 +1,4 @@
-package com.dev.ms_java_mysql.exception;
+package com.develop.ms_java_mysql.exception;
 
 public class EventNotFoundExeption extends RuntimeException {
 

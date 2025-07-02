@@ -1,6 +1,6 @@
-package com.dev.ms_java_mysql.v1.fregues.repositorie;
+package com.develop.ms_java_mysql.v1.repositorie;
 
-import com.dev.ms_java_mysql.v1.fregues.model.RegisterModel;
+import com.develop.ms_java_mysql.v1.model.RegisterModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

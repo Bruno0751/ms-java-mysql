@@ -1,4 +1,4 @@
-package com.dev.ms_java_mysql;
+package com.develop.ms_java_mysql;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

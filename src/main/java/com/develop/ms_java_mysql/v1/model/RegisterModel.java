@@ -1,4 +1,4 @@
-package com.dev.ms_java_mysql.v1.fregues.model;
+package com.develop.ms_java_mysql.v1.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

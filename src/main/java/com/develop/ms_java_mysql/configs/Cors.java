@@ -1,4 +1,4 @@
-package com.dev.ms_java_mysql.configs;
+package com.develop.ms_java_mysql.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

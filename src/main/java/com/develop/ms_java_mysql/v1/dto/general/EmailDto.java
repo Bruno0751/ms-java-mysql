@@ -1,4 +1,4 @@
-package com.dev.ms_java_mysql.v1.fregues.dto.general;
+package com.develop.ms_java_mysql.v1.dto.general;
 
 import lombok.ToString;
 import lombok.AllArgsConstructor;

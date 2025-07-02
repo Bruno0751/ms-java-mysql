@@ -1,4 +1,4 @@
-package com.dev.ms_java_mysql.configs;
+package com.develop.ms_java_mysql.configs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;

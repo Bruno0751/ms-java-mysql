@@ -1,12 +1,12 @@
-package com.dev.ms_java_mysql.v1.fregues.controller;
+package com.develop.ms_java_mysql.v1.controller;
 
-import com.dev.ms_java_mysql.v1.fregues.api.FreguesApi;
-import com.dev.ms_java_mysql.clients.EmailClient;
-import com.dev.ms_java_mysql.v1.fregues.dto.FreguesRecordDto;
-import com.dev.ms_java_mysql.v1.fregues.model.FreguesModel;
-import com.dev.ms_java_mysql.v1.fregues.model.RegisterModel;
-import com.dev.ms_java_mysql.v1.fregues.repositorie.FreguesRepository;
-import com.dev.ms_java_mysql.v1.fregues.repositorie.RegisterRepository;
+import com.develop.ms_java_mysql.v1.api.FreguesApi;
+import com.develop.ms_java_mysql.clients.EmailClient;
+import com.develop.ms_java_mysql.v1.dto.FreguesDto;
+import com.develop.ms_java_mysql.v1.model.FreguesModel;
+import com.develop.ms_java_mysql.v1.model.RegisterModel;
+import com.develop.ms_java_mysql.v1.repositorie.FreguesRepository;
+import com.develop.ms_java_mysql.v1.repositorie.RegisterRepository;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.Optional;
 
 @Component
 @RestController
-public class FreguesController implements FreguesApi{
+public class FreguesController implements FreguesApi {
 
     @Autowired
     FreguesRepository freguesRepository;
@@ -33,14 +33,14 @@ public class FreguesController implements FreguesApi{
 
     @Transactional
     @Override
-    public FreguesModel insert(FreguesRecordDto freguesRecordDto) {
+    public FreguesModel insert(FreguesDto freguesRecordDto) {
         var freguesModel = new FreguesModel();
         BeanUtils.copyProperties(freguesRecordDto, freguesModel);
         try {
             freguesModel = freguesRepository.save(freguesModel);
             var registerModel = new RegisterModel();
             registerRepository.save(registerModel);
-            emailClient.publishMenssageEmail(freguesModel);
+//            emailClient.publishMenssageEmail(freguesModel);
             return freguesModel;
         } catch (ConstraintViolationException e) {
             e.getConstraintViolations().forEach(violation -> {
@@ -72,7 +72,7 @@ public class FreguesController implements FreguesApi{
     }
 
     @Override
-    public ResponseEntity<Object> update(Long id, FreguesRecordDto freguesRecordDto) {
+    public ResponseEntity<Object> update(Long id, FreguesDto freguesRecordDto) {
         Optional<FreguesModel> optional = freguesRepository.findById(id);
         if (optional.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("NAO ENCONTRADO");

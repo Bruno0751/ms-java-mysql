@@ -1,7 +1,7 @@
-package com.dev.ms_java_mysql.infra;
+package com.develop.ms_java_mysql.infra;
 
-import com.dev.ms_java_mysql.exception.EventFullException;
-import com.dev.ms_java_mysql.exception.EventNotFoundExeption;
+import com.develop.ms_java_mysql.exception.EventFullException;
+import com.develop.ms_java_mysql.exception.EventNotFoundExeption;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

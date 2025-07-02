@@ -1,7 +1,7 @@
-package com.dev.ms_java_mysql.v1.fregues.api;
+package com.develop.ms_java_mysql.v1.api;
 
-import com.dev.ms_java_mysql.v1.fregues.dto.FreguesRecordDto;
-import com.dev.ms_java_mysql.v1.fregues.model.FreguesModel;
+import com.develop.ms_java_mysql.v1.dto.FreguesDto;
+import com.develop.ms_java_mysql.v1.model.FreguesModel;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import jakarta.validation.Valid;
@@ -24,7 +24,7 @@ public interface FreguesApi {
     @ApiOperation(value = "Cadastrar fregues", notes = "Forneça dados válido para cadastrar fregues.")
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(value = "")
-    FreguesModel insert(@RequestBody @Valid FreguesRecordDto freguesRecordDto);
+    FreguesModel insert(@RequestBody @Valid FreguesDto freguesRecordDto);
 
     @ApiOperation(value = "Buscar fregues", notes = "Retorno todos os fregueses cadastrados.")
     @ResponseStatus(HttpStatus.OK)
@@ -40,7 +40,7 @@ public interface FreguesApi {
     @ResponseStatus(HttpStatus.CREATED)
     @PutMapping(value = "{id}")
     ResponseEntity<Object> update(@PathVariable(value = "id") Long id,
-                                  @RequestBody @Valid FreguesRecordDto freguesRecordDto);
+                                  @RequestBody @Valid FreguesDto freguesRecordDto);
 
     @ApiOperation(value = "Deletar fregues", notes = "Forneça um ID válido e deletar fregues.")
     @ResponseStatus(HttpStatus.OK)
